@@ -1,0 +1,32 @@
+body{background-color:#143f44;
+        }
+
+.little{height:300px;
+        width:1350px;
+
+        }
+.menu{width:80%;
+      height:50px;
+      margin:0 auto 0;
+      position:relative;
+      top:-100px;
+      padding:0px;
+      left:40px;
+      }
+.menu li{display:inline-block;
+         width:15%;
+         height:40px;
+         background-color:#d0d243;
+         text-align:center;
+         margin:0px;
+         float:left;
+         }
+.menu a{text-decoration:none;
+        font-size:20px;
+        line-height:40px;
+        color:#494633;
+        font-family:"楷体"}
+.menu li:hover{background-color:#98ec7a;
+               }
+.menu a:hover{color:#2a5559;
+                }
