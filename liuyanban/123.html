@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <style  type="text/css">
+    *{padding: 0; margin: 0; }
+    body{background:#877f6c;}
+    li{list-style: none;}
+    #parent{width:1200px;
+            margin:0 auto;}
+            h4{line-height:40px;
+            margin-bottom:10px;
+            border-bottom:1px solid #333;
+            color:#000080;}
+    p{width:100%;
+     background:green;
+     position: relative;
+     margin-bottom:25px;}
+    #box{width:1180px;
+        height:300px;
+        padding:25px 10px 0;
+        border:1px solid #ddd;
+        margin-bottom:10px;
+        background:#b1b479;
+        overflow:auto;}
+    span{position:absolute;
+        top:-20px;
+        right: 0px;}
+    em{position:relative;
+        top:-13px;}
+    #text{width:100%;
+        height:110px;
+        color:#8b3e2f;
+        font-size:20px;
+        overflow:auto;
+        }
+    #btn{width:20%;
+        height:50px;
+        margin-top:13px;}
+  </style>
+  <script type="text/javascript">
+  i=1;
+  function  fnsubmit(){
+  var odiv=document.getElementById("box");
+  var oem=odiv.getElementsByTagName("em")[0];//第一个内容
+  var otext=document.getElementById("text");//输入栏
+  var oli=odiv.getElementsByTagName("li");//有多少个li
+  var add_li=document.createElement("li");//添加一个li
+  var o_span=document.createElement("span");
+  var myDate = new Date();
+  var time=myDate.toLocaleTimeString();
+  var Day = myDate.toLocaleDateString();
+
+  if(otext.value=='')
+  {
+    alert("请填写留言内容！");
+    return false;
+  }
+  oem.style.display="none";//第一个内容消失
+  //定义添加的留言条样式
+  add_li.style.position="abolition";
+  add_li.index=i;
+  add_li.style.background="#4a593d"
+  add_li.style.marginBottom="20px";
+  add_li.style.marginTop ="10px";
+  //时间样式
+  o_span.style.position="relative";
+  o_span.style.marginTop="20px";
+  o_span.style.display="block";
+  //留言条的内容
+  var str=document.createTextNode(i+"、"+otext.value);
+  //添加时间格式
+  var strspan=document.createTextNode(Day+time);
+  //添加留言条和时间
+  o_span.appendChild(strspan);
+  add_li.appendChild(o_span);
+  add_li.appendChild(str);
+  odiv.appendChild(add_li);
+  //保证留言条前面的数字加1
+  i++;
+
+  for(j=0;j<oli.length;j++)
+  {
+    //这里定义是为了删除时是独立删除，不影响其他留言条
+    var m=j;
+    //鼠标移入
+    oli[j].onmouseover=function(){
+        this.style.background="#876633";
+    };
+    //鼠标移开
+    oli[j].onmouseout=function(){
+        this.style.background="#9f353a";
+    };
+  //下面的代码是如果点击会删除
+    oli[j].onclick=function(){
+        m--;
+        odiv.removeChild(this);
+      //如果删除到最后，会显示这里输入内容的话
+        if(m<0)
+            {
+                oem.style.display="block";
+            };
+    };
+  };
+}
+  </script>
+</head>
+<body>
+    <div  id="parent">
+        <h4>留言内容：</h4>
+        <div  id="box"><em>这里会显示留言内容……</em></div>
+        <div >
+            <textarea type="text" id="text"></textarea>
+        </div>
+        <input id="btn" type="button"  onclick="fnsubmit()" value="发表留言" />
+    </div>
+    <br/>
+</body>
+</html>
