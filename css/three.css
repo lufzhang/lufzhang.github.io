@@ -1,0 +1,41 @@
+body{font-size:12px;
+    }
+#accordion{width:810px;
+    height:450px;
+    margin:60px auto;
+    position:absolute;
+    overflow:hidden;
+    border:1px solid #CCC;
+    left:400px;
+    top:295px;
+    }
+#accordion ul{list-style:none;
+                }
+#accordion ul li{width:750px;
+                    height:450px;
+                    position:absolute;
+                     background:#FFF;
+                     }
+#accordion ul li span{display:block;
+                        width:20px;
+                        height:445px;
+                        float:left;
+                        text-align:center;
+                        color:#FFF;
+                        padding-top:5px;
+                        cursor:pointer;
+                        }
+#accordion ul li img{display:block;
+                        float:right;
+                        }
+.bar01{left:0px;}
+.bar02{left:750px;}
+.bar03{left:770px;}
+.bar04{left:790px;}
+
+.bar01 span{background:#09E0B5;}
+.bar02 span{background:#3D7FBB;}
+.bar03 span{background:#5CA716;}
+.bar04 span{background:#F28B24;}
+
+
