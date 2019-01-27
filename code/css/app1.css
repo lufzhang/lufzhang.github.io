@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#mycarousel{
+    width: 600px;
+    margin-top: 80px;
+}
+#Onepange{
+    background-image: url(../images/234234.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+    height:750px;
+}
+.one{   
+    color: rgb(8, 5, 163);
+    margin-left:150px;
+    margin-top:100px; 
+    font-size: 48px;
+    font-weight:bold;
+}
+.oneine p{
+    margin-left: 290px;
+    margin-top: 20px;
+}
+#Twopange{
+    background-image: url(../images/345345.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+    height:750px;
+}
+.clearfix：after，.clearfix：before{
+    content:"";
+    display:table;
+}
+.clearfix：after{
+    clear:both;
+}
+.clearfix{
+    zoom:1
+}
+.two{
+    color: red;
+    font-size: 35px;
+    font-style: italic;
+    font-family: "楷体";
+    font-weight: bold;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.two p{
+    color: red;
+    font-size: 25px;
+    font-family: "楷体";
+    font-weight: bold;
+    margin-left: 800px;
+}
+.twopange{
+    margin-top: 280px;
+}
+.dianjineirong h3{
+    text-align: center;
+}
+.dianjineirong p strong{
+    padding-left:36px; 
+    font-size: 18px;
+}
+.dianjineirong{
+    width: 100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0px;
+    color:#ffffff;
+    opacity: 0;
+}
+.dianjineirong:hover{
+    background:#eb2806;
+    opacity: 0.7;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+}
+#Threepange{
+    background-image: url(../images/456456.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+    height:750px;
+}
