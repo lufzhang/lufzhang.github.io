@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="code/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="code/css/app1.css">
+</head>
+<body>
+    <!-- 这个类是表示这一页，为了区分多页的区别 -->
+    <div class="Onepange">
+        <!-- 这里如果把图片添加到容器container上，就会自动居中 -->
+        <div class="clearfix" id="Onepange">           
+            <div class="container" id="mycarousel">
+                <div id="carousel-example-generic" class="carousel slide" data-interval="2000">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="code/images/1111.png">
+                            <div class="carousel-caption">
+                                <h3>U3D</h3>
+                                <p>U3D</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="code/images/2222.png">    
+                        </div>
+                        <div class="item">
+                            <img src="code/images/3333.png">
+                        </div>
+                        <div class="item">
+                            <img src="code/images/4444.png">
+                        </div>
+                        <div class="item">
+                            <img src="code/images/5555.png">
+                        </div> 
+                    </div>
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 这个类是表示这二页，为了区分多页的区别 -->
+    <div class="Twopange">
+        <div id="Twopange">
+            <div class="title-wenzi clearfix">
+                <div class="two">
+                    千里挥戈，万众俯首；四海江湖，百世王道。
+                    <p>--------《王道》</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 twopange">
+                        <a href="#">
+                            <img src="code/images/123123.png" style="width: 100%;">
+                            <div class="dianjineirong">
+                                <h3>故事</h3>
+                                <p><strong>很多人都是被时代所改变的，只有极少数的人可以改变时代的</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 twopange">
+                        <a href="#">
+                            <img src="code/images/234234.png" style="width: 100%;height: 248px;">
+                            <div class="dianjineirong">
+                                <h3>动画</h3>
+                                <p><strong>这个世上，胜者生，而败者亡，在世事的胜负面前，生与死不过是必然的因素。</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 twopange">
+                        <a href="#">
+                            <img src="code/images/123123.png" style="width: 100%;">
+                            <div class="dianjineirong">
+                                <h3>模型</h3>
+                                <p><strong>弱者没有资格要求公平</strong></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <!-- 第三页 -->
+    <div class="Threepange">
+        <div id="Threepange">
+            <div class="container">
+                <!-- row是为了使用框架内的栅格系统，有row才能使用 -->
+                <div class="row">
+                    <div class="col-md-12 oneine">
+                        <!-- 为了避免污染 -->
+                        <div class="one">
+                            秦时明月与你相伴
+                        </div>
+                        <!-- 定义按钮 -->
+                        <p class="btn btn-info btn-lg">进入主页</p>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="code/js/jquery-2.2.4.js"></script>
+<script src="code/js/bootstrap.js"></script>
+<script>
+    $(".carousel").carousel({
+        interval:2000
+    })
+</script>
+</body>
+</html>
